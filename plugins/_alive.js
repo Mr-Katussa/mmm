@@ -8,11 +8,11 @@ let handler = async (m, { conn }) => {
 ┬╰────────────────···
 ┠─────═[ INFO BOT ]═─────⋆
 │╭────────────────···
-┴│            *Ikratos-MD-v1*
+┴│            *Xcoco-MD-v1*
 ⬡│☂︎ *WHATSAPP BOT CODED BY👇🏽*
-⬡│☂︎           *Ahmad Ali🇵🇰*
+⬡│☂︎           *Sandaru*
 ⬡│☂︎           *OWNER:👇🏽*
-⬡│☂︎ *wa.me/923470027813*
+⬡│☂︎ *wa.me/94764497078*
 ⬡│☂︎ *Don\'t call owner or you will be*
 ⬡│☂︎ *Ignored or blocked without*
 ⬡│☂︎           *warning 🥴😹*
@@ -27,7 +27,7 @@ let handler = async (m, { conn }) => {
 ┬│☂︎ .gimage *Google image downloader*
 │╰────────────────···
 ╰──────────═┅═───────
-*Thanks For Using Ikratos-MD-v1 ✍🏽🌿🥰*
+*Thanks For Using xcoco-MD-v1 ✍🏽🌿🥰*
 `.trim()
   m.reply(caption)
 }
