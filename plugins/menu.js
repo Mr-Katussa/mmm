@@ -12,7 +12,7 @@ const { makeWASocket, BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromCon
 
 const defaultMenu = {
   before: `
-╭─────═[ INFO USER ]═─────⋆
+╭─────═[ U S E R ]═─────⋆
 │╭───────────────···
 ┴│☂︎ *Name:* %name
 ⬡│☂︎ *Tag:* %tag
@@ -249,15 +249,15 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
    {
 	title: `${htki} ᴍᴀɪɴ ${htka}`,
 	rows: [
-	    {title: `⚡ ${pmenus} 𝚂𝙿𝙴𝙴𝙳 𝙱𝙾𝚃`, rowId: ".ping", description: "display bot response speed"},
-	    {title: `⏰ ${pmenus} 𝚁𝚄𝙽𝚃𝙸𝙼𝙴 𝙱𝙾𝚃`, rowId: ".runtime", description: "display bot running time"}, 
-	    {title: `💌 ${pmenus} 𝙾𝚆𝙽𝙴𝚁 𝙱𝙾𝚃`, rowId: ".creator", description: "display info of bot owner"},
-	    {title: `📔 ${pmenus} 𝚂𝙲𝚁𝙸𝙿𝚃 𝙱𝙾𝚃`, rowId: ".sc", description: `𝚂𝚘𝚞𝚛𝚌𝚎 𝙲𝚘𝚍𝚎 ${namebot}`},
+	    {title: `⚡ ${pmenus} S P E E D`, rowId: ".ping", description: "display bot response speed"},
+	    {title: `⏰ ${pmenus} R U N T I M E`, rowId: ".runtime", description: "display bot running time"}, 
+	    {title: `💌 ${pmenus} O W N E R`, rowId: ".creator", description: "display info of bot owner"},
+	    {title: `📔 ${pmenus} S C R I P T`, rowId: ".sc", description: `source code ${namebot}`},
 	]
     },{
 	title: `${htki} sᴜᴘᴘᴏʀᴛ ${htka}`,
 	rows: [
-	    {title: `💹 ${pmenus} 𝙳𝙾𝙽𝙰𝚃𝙴`, rowId: ".donasi", description: 'support the owner to be more enthusiastic'},
+	    {title: `💹 ${pmenus} D O N A T E`, rowId: ".donasi", description: 'support the owner to be more enthusiastic'},
 	]
 	},{
 	title: `${htki} ᴍᴇɴᴜ ${htka}`,
@@ -301,11 +301,11 @@ let tek = `✧────···[ Dashboard ]···────✧
 │⬡ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* User Banned
 ┬
 ├━━━━━━━━━━━━━━━━┈─⋆
-│ ▸ *ᴀᴜᴛʜᴏʀ :* Ahmad Ali
-┴ ▸ *ᴏᴡɴᴇʀ :* xIKRATOSx
+│ ▸ *ᴀᴜᴛʜᴏʀ :* sandaru
+┴ ▸ *ᴏᴡɴᴇʀ :* Mr-Katussa
 ✧
 ┬ 📌 𝗣𝗶𝗻𝗻𝗲𝗱 :
-│ Give me a break, SIS ^ω^
+│ Give me a break
 ╰━━━━━━━━━━━━━━━━┈─◂`
 const listMessage = {
   text: tek,
@@ -320,15 +320,15 @@ const listMessage = {
     }
 
  /**************************** TIME *********************/
- let wib = moment.tz('Asia/Karachi').format('HH:mm:ss')
-    let wibh = moment.tz('Asia/Karachi').format('HH')
-    let wibm = moment.tz('Asia/Karachi').format('mm')
-    let wibs = moment.tz('Asia/Karachi').format('ss')
-    let wit = moment.tz('Asia/Karachi').format('HH:mm:ss')
-    let wita = moment.tz('Asia/Karachi').format('HH:mm:ss')
+ let wib = moment.tz('Asia/Colombo').format('HH:mm:ss')
+    let wibh = moment.tz('Asia/Colombo').format('HH')
+    let wibm = moment.tz('Asia/Colombo').format('mm')
+    let wibs = moment.tz('Asia/Colombo').format('ss')
+    let wit = moment.tz('Asia/Colombo').format('HH:mm:ss')
+    let wita = moment.tz('Asia/Colombo').format('HH:mm:ss')
     let wktuwib = `${wibh} H ${wibm} M ${wibs} S`
  
- let mode = global.opts['self'] ? 'Private' : 'Publik'
+ let mode = global.opts['self'] ? 'Private' : 'Public'
     let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
     let { age, exp, limit, level, role, registered, money} = global.db.data.users[m.sender]
     let { min, xp, max } = xpRange(level, global.multiplier)
@@ -448,7 +448,7 @@ const listMessage = {
     itemCount : 2022,
     status: 1,
     surface : 1,
-    message: `Hai Sis ${name}!`, 
+    message: `Hai Bro ${name}!`, 
     orderTitle: `▮Menu ▸`,
     thumbnail: await (await fetch(flaaa + 'Menu')).buffer(), //Gambarnye
     sellerJid: '0@s.whatsapp.net' 
@@ -638,7 +638,7 @@ function clockStringP(ms) {
   return [ye, ' *Years 🗓️*\n',  mo, ' *Month 🌙*\n', d, ' *Days ☀️*\n', h, ' *Hours 🕐*\n', m, ' *Minute ⏰*\n', s, ' *Second ⏱️*'].map(v => v.toString().padStart(2, 0)).join('')
 }
 function ucapan() {
-  const time = moment.tz('Asia/Karachi').format('HH')
+  const time = moment.tz('Asia/Colombo').format('HH')
   let res = "Why haven\'t you slept yet?? 🥱"
   if (time >= 4) {
     res = "Morning 🌄"
@@ -656,7 +656,7 @@ function ucapan() {
 }
 function timeimg() {
     let imgloc = ''
-  const time = moment.tz('Asia/Karachi').format('HH')
+  const time = moment.tz('Asia/Colombo').format('HH')
   imgloc = ('./media/elaina8.png')
   if (time >= 0) {
     imgloc = ('./media/elaina.png')
