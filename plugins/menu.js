@@ -473,7 +473,7 @@ const listMessage = {
     }
     }
     }
-    conn.reply(m.chat, '*Wait a minute Sis. . .*', ftrol) 
+    conn.reply(m.chat, '*L O A D I N G*', ftrol) 
     
     //------------------< MENU >----------------
     
